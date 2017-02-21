@@ -27,8 +27,7 @@ namespace TestApplication
             InitializeComponent();
 
             // create wordnet engine (use disk-based retrieval by default)
-            string root = Directory.GetDirectoryRoot(".");
-            _wordNetEngine = new WordNetEngine(root + @"NLP\Resources\WordNet_3", false);
+            _wordNetEngine = new WordNetEngine(@".\Data", false);
 
             if (!_wordNetEngine.InMemory)
                 test.Text += " (will take a while)";
