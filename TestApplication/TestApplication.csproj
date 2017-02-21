@@ -53,15 +53,6 @@
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="LAIR.Collections">
-      <HintPath>..\Binaries\LAIR.Collections.dll</HintPath>
-    </Reference>
-    <Reference Include="LAIR.Extensions">
-      <HintPath>..\Binaries\LAIR.Extensions.dll</HintPath>
-    </Reference>
-    <Reference Include="LAIR.IO">
-      <HintPath>..\Binaries\LAIR.IO.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
@@ -132,11 +123,18 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Analyzer Include="..\Binaries\LAIR.Collections.dll" />
-    <Analyzer Include="..\Binaries\LAIR.Extensions.dll" />
-    <Analyzer Include="..\Binaries\LAIR.IO.dll" />
-  </ItemGroup>
-  <ItemGroup>
+    <ProjectReference Include="..\LAIR.Collections\LAIR.Collections.csproj">
+      <Project>{36dfcb38-8f46-410a-9765-4f41deea9abd}</Project>
+      <Name>LAIR.Collections</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LAIR.Extensions\LAIR.Extensions.csproj">
+      <Project>{df8f1034-7024-4213-a260-95525f44b585}</Project>
+      <Name>LAIR.Extensions</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LAIR.IO\LAIR.IO.csproj">
+      <Project>{71e1495c-62bc-404e-af8d-a6d8646457d3}</Project>
+      <Name>LAIR.IO</Name>
+    </ProjectReference>
     <ProjectReference Include="..\WordNet\WordNet.csproj">
       <Project>{f4c6c48c-90ef-445d-b8f8-ad9b6767d9a8}</Project>
       <Name>WordNet</Name>

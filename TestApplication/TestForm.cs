@@ -81,7 +81,10 @@ namespace TestApplication
                 // get all synsets
                 else
                 {
-                    try { synSetsToShow = _wordNetEngine.GetSynSets(word.Text, (WordNetEngine.POS)pos.SelectedItem); }
+                    try 
+                    {
+                        synSetsToShow = _wordNetEngine.GetSynSets(word.Text, (WordNetEngine.POS)pos.SelectedItem);
+                    } 
                     catch (Exception ex) { MessageBox.Show("Error:  " + ex); return; }
                 }
             }
